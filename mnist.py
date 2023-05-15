@@ -148,6 +148,8 @@ def run(gpu):
   if gpu:
     logging.info("GPU training time= {}".format(  
       str(datetime.datetime.now() - time_start)))  
+    print("GPU training time= {}".format(  
+      str(datetime.datetime.now() - time_start)))
   else:
     logging.info("CPU training time= {}".format(  
       str(datetime.datetime.now() - time_start))) 
