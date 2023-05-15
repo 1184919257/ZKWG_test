@@ -19,7 +19,7 @@ from torch.nn.modules import Module
 from torchvision import datasets, transforms
 
 gbatch_size = 128
-epochs = 10
+epochs = 160
 world_size = os.environ.get("WORLD_SIZE", "{}")
 rank = os.environ.get("RANK", "{}")
 
