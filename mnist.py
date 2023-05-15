@@ -164,7 +164,7 @@ if __name__ == "__main__":
   parser = argparse.ArgumentParser(description='Train Pytorch model using DDP')
   parser.add_argument('--gpu', action='store_true',
                       help='Use GPU and CUDA')
-  parser.set_defaults(gpu=False)
+  parser.set_defaults(gpu=True)
   args = parser.parse_args()
   if args.gpu:
     logging.info("\n======= CUDA INFO =======")
@@ -174,6 +174,6 @@ if __name__ == "__main__":
       logging.info("CUDA Version: %s", torch.version.cuda)
     logging.info("=========================\n")
   dist.init_process_group(backend='gloo', init_method='env://',world_size=int(world_size),rank=int(rank))
-  run(gpu=False)
+  run(gpu=True)
   dist.destroy_process_group()
   
