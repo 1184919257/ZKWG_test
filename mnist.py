@@ -170,6 +170,7 @@ if __name__ == "__main__":
   args = parser.parse_args()
   if args.gpu:
     logging.info("\n======= CUDA INFO =======")
+    print("\n======= CUDA INFO =======")
     logging.info("CUDA Availibility: %s", torch.cuda.is_available())
     if torch.cuda.is_available():
       logging.info("CUDA Device Name: %s", torch.cuda.get_device_name(0))
